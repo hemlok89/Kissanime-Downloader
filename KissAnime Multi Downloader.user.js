@@ -5,9 +5,9 @@
 // @description  This is a userscript that will download multi episodes form KissAnime.
 // @author       AnimeBro1
 // @homepage     https://github.com/Eltion/Kissanime-Downloader
-// @match        http://kissanime.ru/Anime/*
-// @include      http://kissanime.ru/Anime/*
-// @exclude      http://kissanime.ru/Anime/*/*
+// @match        https://kissanime.ru/Anime/*
+// @include      https://kissanime.ru/Anime/*
+// @exclude      https://kissanime.ru/Anime/*/*
 // @grant        GM_getValue
 // @grant        GM_listValues
 // @run-at       document-end
@@ -336,10 +336,10 @@ function createM3U8(){
 }
 
 function createIDM(){
-    var list ='IF EXIST %PROGRAMFILES(X86)%\n(cd "%ProgramFiles(x86)%\\Internet Download Manager")\nELSE (cd "%ProgramFiles%\\Internet Download Manager")\n';
+    var list ='(cd "%ProgramFiles%\\Internet Download Manager")\n';
     for(var i = 0; i < EpisodesVideoLinks.length; i++){
         //list += encodeURI(EpisodesVideoLinks[i]) + "[" +  EpisodesName[i].replace(/[\s:\|\[\]\{\}]+/g,"_") + ".mp4\n";
-        list += 'IDMan.exe  /n /p "%UserProfile%\\Downloads\\Anime\\'+ nameOfAnime+ '" /a /f "' + EpisodesName[i].replace(/[\s:\|\[\]\{\}]+/g,"_")+'.mp4" /d "'+encodeURI(EpisodesVideoLinks[i])+'"\n';
+        list += 'IDMan.exe  /n /p "E:\\Downloads\\Anime\\'+ nameOfAnime+ '" /a /f "' + EpisodesName[i].replace(/[\s:\|\[\]\{\}]+/g,"_")+'.mp4" /d "'+encodeURI(EpisodesVideoLinks[i])+'"\n';
     }
     list += "IDMan.exe /s \n";
     list += "IDMan.exe";
@@ -482,4 +482,3 @@ function toDataURL(url, callback) {
   xhr.responseType = 'blob';
   xhr.send();
 }
-
