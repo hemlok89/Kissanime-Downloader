@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         KissAnime Downloader
-// @namespace    https://greasyfork.org/en/users/135934-anime-bro1
+// @namespace    https://github.com/hemlok89/Kissanime-Downloader
 // @version      3.3.1
 // @description  This is a userscript that will download multi episodes form KissAnime.
 // @author       AnimeBro1
-// @homepage     https://github.com/Eltion/Kissanime-Downloader
+// @homepage     https://github.com/hemlok89/Kissanime-Downloader
 // @match        https://kissanime.ru/Anime/*
 // @include      https://kissanime.ru/Anime/*
 // @exclude      https://kissanime.ru/Anime/*/*
